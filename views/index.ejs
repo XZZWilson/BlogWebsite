@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
     <title>Document</title>
   </head>
   <body>
+    <%-include("partials/header.ejs")%>
+    <div class="center-align">
+      <% posts.forEach(post => { %>
+      <h2><%= post.subject %></h2>
+      <form action="/post/edit" method="POST">
+        <input type="hidden" name="id" value="<%= post.id %>" />
+        <input type="submit" value="Edit" />
+      </form>
+      <p><%= post.content %></p>
+      <small><%= post.createdOn.toDateString() %></small>
 
-    <form action="/create" method="POST">
-      <input name="subject" />
-      <textarea name="content"></textarea>
-      <input type="submit" value="Create Post" />
-    </form>
+      <form action="/delete" method="POST">
+        <input type="hidden" name="id" value="<%= post.id %>" />
+        <input type="submit" value="Delete" />
+      </form>
+    </div>
 
-    <% posts.forEach(post => { %>
-    <h2><%= post.subject %></h2>
-    <p><%= post.content %></p>
-    <small><%= post.createdOn.toDateString() %></small>
-    <% }) %>
+    <% }) %> <%-include("partials/footer.ejs")%>
   </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Blog Page</title>
+  </head>
+  <body>
+    <%-include("partials/header.ejs")%>
+      <p class="about-para">
+        This is a mock blog page used to test my learning in things like EJS,
+        Node.js, Express.js, CSS, and Javascript. <br />
+        It features things like creating, editing, and deleting a post <br />
+        but it cannot save the posts you made because it doesn't have a database
+        to hold the info.
+      </p>
+    <%-include("partials/footer.ejs")%>
+  </body>
+</html>

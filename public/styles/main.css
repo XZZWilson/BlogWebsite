@@ -1,0 +1,11 @@
+.center-align{
+  text-align: center;
+}
+
+p.about-para{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  font-size: auto;
+}

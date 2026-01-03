@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>EJS Partials</title>
+  </head>
+  <header>
+    <div class="container">
+      <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-4">Wilson's Blog Page</span>
+        </a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <form action="/create" method="POST">
+              <input class="nav-link active" type="submit" value="Create" />
+            </form>
+          </li>
+          <li class="nav-item">
+            <form action="/about" method="GET">
+            <input class="nav-link" type="submit" value="About" />
+          </li>
+          </form>
+        </ul>
+      </header>
+    </div>
+  </header>
+  <main class="container"></main>
+</html>
