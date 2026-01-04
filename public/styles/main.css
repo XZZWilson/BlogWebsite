@@ -2,10 +2,20 @@
   text-align: center;
 }
 
-p.about-para{
+.center{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
+}
+
+.text-box{
+  max-width: 300px;
+  text-align: center;
+
+}
+
+p.about-para{
   font-size: auto;
 }
+
